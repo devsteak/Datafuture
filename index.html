@@ -34,6 +34,25 @@
   <link rel="stylesheet" href="css/style.css">
   <title>DATA FUTURE</title>
 
+  <script>
+    function validarFormulario() {
+      var fname = document.getElementById("fname").value;
+      var lname = document.getElementById("lname").value;
+      var email = document.getElementById("email").value;
+      var codigo = document.getElementById("codigo").value;
+      var estado = document.getElementById("estado").value;
+      var cidade = document.getElementById("cidade").value;
+      var valor_emprestimo = document.getElementById("valor_emprestimo").value;
+      var produto_plantio = document.getElementById("produto_plantio").value;
+
+      if (fname === "" || lname === "" || email === "" || codigo === "" || estado === "" || cidade === "" || valor_emprestimo === "" || produto_plantio === "") {
+        alert("Por favor, preencha todos os campos antes de enviar o formulário.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
 
 
 
@@ -429,79 +448,73 @@
           </div>
         </section>
 
-        <section class="site-section" id="section-contact">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-md-8">
-                <h2 class=" mb-5 heading">CADASTRO</h2>
-
-                <form action="#">
+       
 
 
-
+                <section class="site-section" id="section-contact">
+                  <div class="container">
+                    <div class="row justify-content-center">
+                      <div class="col-md-8">
+                        <h2 class="mb-5 heading">CADASTRO</h2>
+              
+                        <form action="cadastro.html" method="post" onsubmit="return validarFormulario();">
+      
+                <form action="#" method="post">
                   <div class="row form-group">
                     <div class="col-md-6 mb-3 mb-md-0">
-                      <label class="" for="fname">PRIMEIRO NOME</label>
-                      <input type="text" id="fname" class="form-control">
+                      <label for="fname">PRIMEIRO NOME</label>
+                      <input type="text" id="fname" class="form-control" required>
                     </div>
                     <div class="col-md-6">
-                      <label class="" for="lname">ULTIMO NOME</label>
-                      <input type="text" id="lname" class="form-control">
+                      <label for="lname">ULTIMO NOME</label>
+                      <input type="text" id="lname" class="form-control" required>
                     </div>
-                    
                   </div>
-
+      
                   <div class="row form-group">
-
                     <div class="col-md-8">
-                      <label class="" for="email">E-MAIL</label> 
-                      <input type="email" id="email" class="form-control">
+                      <label for="email">E-MAIL</label>
+                      <input type="email" id="email" class="form-control" required>
                     </div>
                     <div class="col-md-4">
-                      <label class="" for="codigo">CPF/CNPJ</label> 
-                      <input type="email" id="codigo" class="form-control">
+                      <label for="codigo">CPF/CNPJ</label>
+                      <input type="text" id="codigo" class="form-control" required>
                     </div>
                   </div>
-
+      
                   <div class="row form-group">
-
                     <div class="col-md-3">
-                      <label class="" for="estado">ESTADO</label> 
-                      <input type="subject" id="estado" class="form-control">
+                      <label for="estado">ESTADO</label>
+                      <input type="text" id="estado" class="form-control" required>
                     </div>
                     <div class="col-md-5">
-                      <label class="" for="cidade">CIDADE</label> 
-                      <input type="subject" id="cidade" class="form-control">
+                      <label for="cidade">CIDADE</label>
+                      <input type="text" id="cidade" class="form-control" required>
                     </div>
                     <div class="col-md-4">
-                      <label class="" for="valor_emprestimo">VALOR DO EMPRESTIMO</label> 
-                      <input type="subject" id="valor_emprestimo" class="form-control">
+                      <label for="valor_emprestimo">VALOR DO EMPRESTIMO</label>
+                      <input type="text" id="valor_emprestimo" class="form-control" required>
                     </div>
                   </div>
-
+      
                   <div class="row form-group mb-5">
                     <div class="col-md-12">
-                      <label class="" for="produto_plantio">PRODUTO DE PLANTIO</label> 
-                      <textarea name="message" id="produto_plantio" cols="30" rows="7" class="form-control"></textarea>
+                      <label for="produto_plantio">PRODUTO DE PLANTIO</label>
+                      <textarea name="message" id="produto_plantio" cols="30" rows="7" class="form-control" required></textarea>
                     </div>
                   </div>
-
-                  <div class="row form-group">
-
-                  </div>
-
+      
                   <div class="row form-group">
                     <div class="col-md-12">
-                     <a <input type="submit" value="ENVIAR CADASTRO" href="Cadastro.html"class="btn btn-primary btn-md"> CADASTRAR <a href="Cadastro.html"></a>
+                      <button type="submit" class="btn btn-primary btn-md">CADASTRAR</button>
                     </div>
                   </div>
-
-
                 </form>
               </div>
             </div>
           </div>
         </section>
+        
 
         <div class="row justify-content-center">
           <div class="col-md-12 text-center py-5">
